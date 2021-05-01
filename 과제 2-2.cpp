@@ -6,29 +6,32 @@ int main()
 {
 	int n, i, a;
 
-	cout << "N°ªÀ» ÀÔ·ÂÇÏ¼¼¿ä. : ";
+	cout << "Nê°’ì„ ì…ë ¥í•˜ì„¸ìš”. : ";
 	cin >> n;
-	if (n == 1)
+	if (n == 1)// nì´ 1ì¼ ë•Œ *ì€ í•œ ê°œë§Œ ì¶œë ¥ 
 	{
 		cout << "*";
 	}
-	for (int i = 1; i <= n * 2; i++)//ÀüÃ¼ ÇàÀÇ ¼ö´Â 2*nÀÌ´Ù
+	else
 	{
-		for (int a = 1; a <= n; a++)
+		for (int i = 1; i <= n * 2; i++)//ì „ì²´ í–‰ì˜ ìˆ˜ëŠ” 2*nì´ë‹¤
 		{
-			if (i % 2 == 0) // Â¦¼öÀÏ °æ¿ì
+			for (int a = 1; a <= n; a++)
 			{
-				if (a % 2 == 0)
-					cout << "*";
-				else cout << " ";
+				if (i % 2 == 0) // ì§ìˆ˜ì¼ ê²½ìš°
+				{
+					if (a % 2 == 0)
+						cout << "*";
+					else cout << " ";
+				}
+				else // í™€ìˆ˜ì¼ ê²½ìš°
+				{
+					if (a % 2 == 0)
+						cout << " ";
+					else cout << "*";
+				}
 			}
-			else // È¦¼öÀÏ °æ¿ì
-			{
-				if (a % 2 == 0)
-					cout << " ";
-				else cout << "*";
-			}
+			cout << endl;
 		}
-		cout << endl;
 	}
 }
